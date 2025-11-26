@@ -15,7 +15,7 @@ jobs:
 
       - name: Zip Lambda Code
         run: |
-          zip -r ../lambda.zip .
+          zip -r lambda.zip .
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
