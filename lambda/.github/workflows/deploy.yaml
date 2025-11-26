@@ -14,7 +14,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Zip Lambda Code
-        run: zip -r lambda.zip .
+        run: |
+          cd lambda
+          zip -r ../lambda.zip .
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -47,4 +49,3 @@ jobs:
             --function-name ${{ secrets.LAMBDA_NAME }} \
             --name prod \
             --function-version ${{ steps.publish.outputs.version }}
-
