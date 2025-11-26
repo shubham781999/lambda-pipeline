@@ -15,7 +15,6 @@ jobs:
 
       - name: Zip Lambda Code
         run: |
-          cd lambda
           zip -r ../lambda.zip .
 
       - name: Configure AWS Credentials
