@@ -3,7 +3,7 @@ exports.handler = async (event) => {
         statusCode: 200,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-            message: "Hello from Lambda CI/CD Pipeline-testinggggggggg",
+            message: "Hello from Lambda CI/CD Pipeline-testingprodddddggggg",
             time: new Date().toISOString(),
         }),
     };
